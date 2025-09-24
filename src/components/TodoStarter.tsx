@@ -24,10 +24,13 @@ const AppContainer = styled.div`
 // TODO 1: Flexbox로 좌우 끝 정렬
 const Header = styled.header`
   /* 🎯 필요한 속성:
-     - display: ???
-     - justify-content: ???
-     - align-items: ???
+     - display: flex
+     - justify-content: space-between
+     - align-items: center
   */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   /* 기본 스타일 제공 (수정 불필요) */
   width: 100%;
@@ -53,10 +56,12 @@ const Header = styled.header`
 
 // TODO 2: Flexbox로 input이 남은 공간 차지
 const InputForm = styled.form`
-  /* 🎯 Form에 필요한 속성:
-     - display: ???
-     - ???: ??? // input과 버튼 사이 간격 12px
+  /* 🎯 필요한 속성:
+     - display: flex
+     - gap: 12px
   */
+  display: flex;
+  gap: 12px;
 
   /* 기본 스타일 제공 (수정 불필요) */
   width: 100%;
@@ -65,8 +70,9 @@ const InputForm = styled.form`
 
   input {
     /* 🎯 필요한 속성:
-       - ???: ??? (남은 공간 차지)
+       - flex: 1
     */
+    flex: 1;
 
     /* 기본 스타일 제공 (수정 불필요) */
     padding: 14px 20px;
@@ -119,10 +125,13 @@ const InputForm = styled.form`
 // TODO 3: Grid로 반응형 카드 레이아웃
 const TodoGrid = styled.div`
   /* 🎯 필요한 속성:
-     - display: ???
-     - grid-template-columns: repeat(???, minmax(???, ???))
-     - gap: ??? // 간격 20px
+     - display: grid
+     - grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+     - gap: 20px
   */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
 
   /* 기본 스타일 제공 (수정 불필요) */
   width: 100%;
@@ -180,10 +189,13 @@ const TodoCard = styled.div<TodoCardProps>`
 // TODO 4: Flexbox로 체크박스와 텍스트 정렬
 const CardContent = styled.div`
   /* 🎯 필요한 속성:
-     - display: ???
-     - align-items: ???
-     - gap: ??? // 간격 12px
+     - display: flex
+     - align-items: center
+     - gap: 12px
   */
+  display: flex;
+  align-items: center;
+  gap: 12px;
 
   /* 기본 스타일 제공 (수정 불필요) */
   margin-bottom: 16px;
@@ -206,10 +218,13 @@ const CardContent = styled.div`
 // TODO 5: Flexbox로 우선순위와 버튼 양 끝 정렬
 const CardActions = styled.div`
   /* 🎯 필요한 속성:
-     - display: ???
-     - justify-content: ???
-     - align-items: ???
+     - display: flex
+     - justify-content: space-between
+     - align-items: center
   */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   /* 기본 스타일 제공 (수정 불필요) */
   padding-top: 12px;
